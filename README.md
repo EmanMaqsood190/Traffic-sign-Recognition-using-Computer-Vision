@@ -15,18 +15,18 @@ Unlike deep learning approaches that require heavy computational resources and m
 
 
 
-##  How It Works (The Classification Pipeline)
+#  How It Works (The Classification Pipeline)
 
 The core logic analyzes two key properties of each detected region: **Color Dominance** (pixel counts per mask) and **Geometry** (vertex approximation via `cv2.approxPolyDP`).
 
  Input Image ➔  HSV Conversion ➔  Color Masks ➔  Morphological Cleaning ➔  Shape Analysis ➔  Annotated Output
-# Yellow Dominance:
+## Yellow Dominance:
 
 4 Vertices (Diamond): Classified as U-TURN signs.
 
 Other Shapes: Classified as general CAUTION signs.
 
-# Red Dominance:
+## Red Dominance:
 
 Many Vertices (>5) + High White Content: Classified as SPEED LIMIT signs.
 
@@ -34,7 +34,7 @@ High Vertices (>5) + Low White Content: Classified as STOP signs.
 
 3 to 4 Vertices (Triangles/Rectangles): Classified as DANGER / WARNING signs.
 
-# Blue Dominance:
+## Blue Dominance:
 
 4 Vertices (Perfect Rectangles/Squares): Classified as PARKING signs.
 
@@ -45,7 +45,7 @@ Circular/Other Shapes: Classified as DIRECTIONAL signs.
 ├── traffic signs.jpg                # Sample testing dataset image
 └── README.md                        # Project documentation
 
-## Installation & Setup
+# Installation & Setup
 Clone the Repository:
 git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
 cd YOUR_REPO_NAME
@@ -57,7 +57,7 @@ pip install opencv-python-headless matplotlib numpy
 Run the Project:
 Open the Jupyter Notebook (Traffic_signs_recognation.ipynb) in your preferred environment (VS Code, Jupyter Lab, or upload it directly to Google Colab) and run all cells sequentially.
 
- ## Current Limitations
+ # Current Limitations
 1.While traditional computer vision algorithms are incredibly fast and lightweight, they have explicit operational thresholds:
 
 2.Strict Color Thresholds: Radical environmental changes (e.g., night-time driving, heavy shadows, directly glaring sunlight, or lens flares) can shift the HSV values, leading to missed detections.
@@ -66,7 +66,7 @@ Open the Jupyter Notebook (Traffic_signs_recognation.ipynb) in your preferred en
 
 4.Overlapping Backgrounds: If objects in the environment (like red brick buildings, yellow cars, or blue billboards) fall within the targeted HSV thresholds and sit near structural shapes, the algorithm can produce false positives.
 
- ## Future Improvements
+ # Future Improvements
 1.To transform this lightweight system into a highly robust, production-grade application, the following updates are planned:
 
 2. Adaptive Thresholding: Integrate dynamic illumination adjustment algorithms to automatically alter HSV ranges based on global image brightness levels.
