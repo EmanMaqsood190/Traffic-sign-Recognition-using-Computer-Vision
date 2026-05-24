@@ -41,7 +41,7 @@ High Vertices (>5) + Low White Content: Classified as STOP signs.
 Circular/Other Shapes: Classified as DIRECTIONAL signs.
 
 ## Project Structure
- ├── Traffic_signs_recognation.ipynb  # Main Jupyter Notebook / Google Colab Pipeline
+├── Traffic_signs_recognation.ipynb  # Main Jupyter Notebook / Google Colab Pipeline
 ├── traffic signs.jpg                # Sample testing dataset image
 └── README.md                        # Project documentation
 
